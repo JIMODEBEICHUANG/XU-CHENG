@@ -1,0 +1,28 @@
+
+<div action="/event/homepage" method="POST">
+	<div class="row">
+	<% events.forEach( function(model) { %>
+		<div class="col-lg-6 col-sm-10 panel panel-default">
+			<div class="panel-heading">
+				<strong><p class="panel-title"><a href="eventdetail/<%=model.id%>"><%=model.name%></a></p></strong>
+			</div>
+			<div class="panel-body">
+				<div class="col-xs-4">
+					<img src="<%=model.image%>" class="img-rounded img-respo:100px;object-fit:cover;" style="height: 200px;
+	width: 140px;"></img>
+				</div>
+				<div class="col-xs-8" style="min-height:200px;max-height:200px;overflow:scroll">
+					<%=model.shortDes%>
+				</div>
+			</div>	
+		</div>
+	<% }); %>
+	</div>
+</div>
+<!--col-lg-10 col-lg-offset-1
+col-md-12
+col-sm-12
+col-xs-12
+
+col-md-6
+col-xs-12-->

@@ -1,0 +1,85 @@
+<h2 class=" col-lg-12 col-sm-offset-1">Event Update form</h2>
+<form action="/event/update/<%=event.id%>" method="POST" class="form-horizontal">
+	<div class="row">		
+		<div class="form-group">
+			<label class="control-label col-sm-2">Event Name: </label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[name]" type="text" value="<%=event.name%>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2 ">Short Discription: </label>
+			<div class="col-sm-8">
+				<textarea row="10" class="form-control" name="Event[shortDes]" type="text" style="height:50px;" value="<%=event.shortDes%>"><%=event.shortDes%></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">Full Discription: </label>
+			<div class="col-sm-8">
+				<textarea row="20" class="form-control" name="Event[fullDes]" type="text" style="height:100px;" value="<%=event.fullDes%>"><%=event.fullDes%></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">Image URL: </label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[image]" type="url" value="<%=event.image%>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">venue:</label>
+			<div class="col-sm-8">
+				<select id="venue" class="form-control" name="Event[venue]">
+					<option value="AC Hall">AC Hall</option>
+					<option value="SWT501">SWT501</option>
+					<option value="RRS638">RRS638</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">organizer:</label>
+			<div class="col-sm-8">
+				<select id="organizer" class="form-control" name="Event[organizer]">
+					<option value="gis">gis</option>
+					<option value="Music Society">Music Society</option>
+					<option value="comp">comp</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">quota:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[quota]" type="number" min="0" max="unbounded" value="<%=event.quota%>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">date:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[date]" type="date" value="<%=event.date%>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">startTime:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[startTime]" type="time" value="<%=event.startTime%>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">endTime:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[endTime]" type="time" value="<%=event.endTime%>">
+			</div>			
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">highlighted: </label>
+			<div class="col-sm-1">
+				<input id="highlighted" class="form-control" name="Event[highlighted]" type="checkbox" value="checked" <%=event.highlighted%>></input>
+			</div>
+		</div>
+		<button class="btn btn-default col-xs-1 col-offset-2" type="submit" value="ADD">Submit</button>
+	</div>
+</form>
+
+<script type="text/javascript">
+	document.getElementById("venue").value = "<%=event.venue%>"
+	document.getElementById("organizer").value = "<%=event.organizer%>"
+</script>

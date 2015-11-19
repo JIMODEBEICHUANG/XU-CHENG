@@ -1,0 +1,36 @@
+
+<div action="/eventail/<%=event.id%>" method="POST">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 panel panel-default" style="height:500px;">
+			<div class="panel-heading">
+				<strong><p class="panel-title"><%=event.name%></p></strong>
+			</div>
+			<div class="panel-body" style="height:500px;">
+				<div class="col-sm-4">
+					<img src="<%=event.image%>" class="img-rounded img-respo:100px;object-fit:cover;" style="height: 400px;
+					width: 220px;"></img>
+				</div>
+				<div class="col-sm-8" style="min-height:400px;max-height:400px;overflow:scroll">
+					<div>
+						<p><%=event.fullDes%></p>
+					</div>
+					<div>
+						<p>Organizer:<%=event.organizer%></p>
+					</div>
+					<div>
+						<p>Date:<%=event.date%></p>
+					</div>
+					<div>
+						<p>Time:<%=event.startTime%>~<%=event.endTime%></p>
+					</div>
+					<div>
+						<p>Venue:<%=event.venue%></p>
+					</div>
+					<div>
+						<p>Quota:<%=event.quota%></p>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</form>

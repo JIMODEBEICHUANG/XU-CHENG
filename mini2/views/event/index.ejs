@@ -1,0 +1,7 @@
+ <table class="table"> 
+
+	<% events.forEach( function(model) { %>
+		<tr><td><%=model.name%></td><td><%=model.shortDes%></td><td><%=model.fullDes%></td><td><%=model.image%></td><td><%=model.venue%></td><td><%=model.organizer%></td><td><%=model.quota%></td><td><%=model.date%></td><td><%=model.startTime%></td><td><%=model.endTime%></td><td><%=model.createdAt%></td><td><%=model.updatedAt%></td><td><%=model.id%></td></tr>
+	<% }); %>
+		
+</table>

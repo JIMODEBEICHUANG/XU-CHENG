@@ -1,0 +1,73 @@
+<h2 class="control-label col-sm-10"><strong>Event Create form</strong></h2>
+
+<form action="/event/create" method="POST" class="form-horizontal">
+	<div class="row col-md-10 col-md-offset-1">
+		<div class="form-group">
+			<label class="control-label col-sm-2">Event Name: </label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[name]" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2 ">Short Discription: </label>
+			<div class="col-sm-8">
+				<textarea row="10" style="height:50px;" class="form-control" name="Event[shortDes]" type="text"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">Full Discription: </label>
+			<div class="col-sm-8">
+				<textarea row="20" style="height:100px;" class="form-control" name="Event[shortDes]" type="text"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">Image URL: </label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[image]" type="url">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">venue:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[venue]" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">organizer:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[organizer]" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">quota:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[quota]" type="number" min="0" max="unbounded">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">date:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[date]" type="date">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">startTime:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[startTime]" type="time">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">endTime:</label>
+			<div class="col-sm-8">
+				<input class="form-control" name="Event[endTime]" type="time">
+			</div>			
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">highlighted: </label>
+			<div class="col-sm-1">
+				<input id="highlighted" class="form-control" name="Event[highlighted]" type="checkbox" value="checked"></input>
+			</div>
+		</div>
+		<button class="btn btn-default col-xs-1 col-sm-offset-2" type="submit" value="ADD">Submit</button>
+	</div>
+</form>

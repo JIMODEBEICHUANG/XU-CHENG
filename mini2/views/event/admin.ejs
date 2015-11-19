@@ -1,0 +1,11 @@
+ <div action="/event/admin" method="POST">
+ 	<div class="panel panel-default">
+ 		<div class="panel-heading">
+ 			<table class="table"> 
+				<% events.forEach( function(model) { %>
+					<tr><td><%=model.name%></td><td><a href="update/<%=model.id%>">Edit</a></td><td><a href="delete/<%=model.id%>">Delete</a></td></tr>
+				<% }); %>		
+			</table>
+		</div>
+	</div>
+</div>
